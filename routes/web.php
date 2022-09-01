@@ -21,6 +21,9 @@ Route::get('/welcome', function () {
 Route::get('/test', [MyController::class, 'show_tests'])->middleware(['auth'])->name('test');;
 Route::get('/test/{id}', [MyController::class, 'show_question']);
 
+//Маппинг на функцию обработки результатов теста
+
+
 Route::get('/', function () {
     return view('welcome');
 })->middleware(['auth'])->name('dashboard');
